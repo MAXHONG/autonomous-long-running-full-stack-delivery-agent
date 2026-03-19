@@ -75,6 +75,55 @@ Use the autonomous-long-running-full-stack-delivery-agent to continue this proje
 3. 第一次使用时显式点名技能。
 4. 跑通一次后，再让平台依赖自动发现和自动选择。
 
+## 如何进一步提高自动触发概率
+
+### Codex
+
+- 把技能放在 `~/.codex/skills/<name>/`。
+- `description` 要写成“路由规则”，不要写成空泛 slogan。
+- 尽量包含用户真实会说的动词：continue、take over、recover、fix、test、document、ship。
+
+### OpenCode
+
+OpenCode 官方文档明确说，技能是按需加载的，同时还受 `permission.skill` 控制。如果你觉得自动加载不够积极：
+
+- 优先装到 `.opencode/skills/` 或 `~/.config/opencode/skills/`
+- 确保 `skill` 工具没有被禁用
+- 在 `opencode.json` 里尽量使用 `"*": "allow"` 或者明确允许这个技能
+
+示例：
+
+```json
+{
+  "permission": {
+    "skill": {
+      "*": "allow",
+      "autonomous-long-running-full-stack-delivery-agent": "allow"
+    }
+  }
+}
+```
+
+### Claude Code
+
+Claude Code 官方文档明确建议在 `description` 中加入 “use proactively” 这类词来鼓励自动委派。这个仓库里的 Claude Code 版本已经这么做了。
+
+如果你还希望它更积极：
+
+- 优先装到项目级，让它贴近当前仓库
+- 在第一次请求时点名这个 agent
+- 需要保证调用时，用 `@agent-autonomous-long-running-full-stack-delivery-agent`
+- 如果你希望整个会话都按这个 agent 的系统提示运行，可以用 `--agent autonomous-long-running-full-stack-delivery-agent`
+
+### OpenClaw
+
+OpenClaw 的 workspace skills 优先级最高。如果你希望它更容易自动使用：
+
+- 优先安装到 `<workspace>/skills/`，而不是只装到 `~/.openclaw/skills/`
+- 保持 `user-invocable: true`
+- 保持 `disable-model-invocation: false`
+- 不要添加会把技能过滤掉的 `metadata` 依赖条件
+
 ## 官方参考
 
 - OpenCode Agent Skills：<https://opencode.ai/docs/skills>

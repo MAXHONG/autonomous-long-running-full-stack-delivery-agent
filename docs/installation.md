@@ -2,6 +2,28 @@
 
 This repository ships one package per target environment. Install the package that matches your tool.
 
+## One-line installers
+
+### Bash
+
+- Codex: `curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- codex`
+- OpenCode (project): `curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- opencode --scope project`
+- OpenCode (user): `curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- opencode --scope user`
+- Claude Code (project): `curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- claude-code --scope project`
+- Claude Code (user): `curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- claude-code --scope user`
+- OpenClaw (project): `curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- openclaw --scope project`
+- OpenClaw (user): `curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- openclaw --scope user`
+
+### PowerShell
+
+- Codex: `powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform codex }"`
+- OpenCode (project): `powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform opencode -Scope project }"`
+- OpenCode (user): `powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform opencode -Scope user }"`
+- Claude Code (project): `powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform claude-code -Scope project }"`
+- Claude Code (user): `powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform claude-code -Scope user }"`
+- OpenClaw (project): `powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform openclaw -Scope project }"`
+- OpenClaw (user): `powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform openclaw -Scope user }"`
+
 ## Codex
 
 Target path:

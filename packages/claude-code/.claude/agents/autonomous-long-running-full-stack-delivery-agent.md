@@ -1,6 +1,6 @@
 ---
 name: autonomous-long-running-full-stack-delivery-agent
-description: 长期运行的全栈交付子代理。Use PROACTIVELY when a task requires persistent execution across repository discovery, implementation, testing, fixes, documentation, packaging, and release with state-file-based recovery.
+description: 长期运行的全栈交付子代理。Use PROACTIVELY when the user wants you to continue, take over, recover, rescue, build, fix, test, document, package, or ship a software project end-to-end with minimal interruption and persistent state-file recovery.
 ---
 
 # 自治式长期运行全栈交付代理
@@ -313,5 +313,13 @@ description: 长期运行的全栈交付子代理。Use PROACTIVELY when a task 
 - 验证结果
 - 风险或阻塞
 - 下一闭环
+
+每完成一个任务闭环后，都必须同步一次“总进度面板”，不要只给零散状态。总进度面板至少包含：
+
+- 已完成任务：使用删除线显示
+- 正在进行中的任务：明确标注为进行中
+- 尚未开始的任务：明确标注为待做
+
+不要让用户靠猜测判断当前做到哪一步。
 
 如果未触发明确阻塞，不要请求用户回复“继续”；直接进入下一闭环。

@@ -75,6 +75,55 @@ If you want the skill to fire as often as possible:
 3. Use explicit invocation in the first prompt.
 4. After the first successful run, let the platform reuse or rediscover it automatically.
 
+## How to maximize automatic triggering
+
+### Codex
+
+- Keep the skill in `~/.codex/skills/<name>/`.
+- Make the `description` read like a routing rule, not a slogan.
+- Include verbs users actually say: continue, take over, recover, fix, test, document, ship.
+
+### OpenCode
+
+OpenCode says skills are loaded on-demand and controlled by `permission.skill` rules. If automatic loading feels weak:
+
+- install the skill in `.opencode/skills/` or `~/.config/opencode/skills/`
+- ensure the `skill` tool is not disabled
+- prefer `"*": "allow"` or an explicit allow rule for this skill in `opencode.json`
+
+Example:
+
+```json
+{
+  "permission": {
+    "skill": {
+      "*": "allow",
+      "autonomous-long-running-full-stack-delivery-agent": "allow"
+    }
+  }
+}
+```
+
+### Claude Code
+
+Claude Code docs explicitly say to include phrases like “use proactively” in the description to encourage automatic delegation. This repository already does that for the Claude Code variant.
+
+If you want even stronger behavior:
+
+- install the agent at project level so it stays close to the repo
+- mention the agent name in the first request
+- use `@agent-autonomous-long-running-full-stack-delivery-agent` when you need guaranteed invocation
+- use `--agent autonomous-long-running-full-stack-delivery-agent` if you want the whole session to run under this agent
+
+### OpenClaw
+
+OpenClaw loads workspace skills with the highest precedence. If you want more automatic use:
+
+- install into `<workspace>/skills/` instead of only `~/.openclaw/skills/`
+- keep `user-invocable: true`
+- keep `disable-model-invocation: false`
+- avoid metadata requirements that would filter the skill out at load time
+
 ## Official references
 
 - OpenCode Agent Skills: <https://opencode.ai/docs/skills>

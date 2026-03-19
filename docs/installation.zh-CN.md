@@ -2,6 +2,28 @@
 
 这个仓库按目标平台提供了不同的包，请安装与你的工具匹配的版本。
 
+## 一行安装命令
+
+### Bash
+
+- Codex：`curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- codex`
+- OpenCode（项目级）：`curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- opencode --scope project`
+- OpenCode（用户级）：`curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- opencode --scope user`
+- Claude Code（项目级）：`curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- claude-code --scope project`
+- Claude Code（用户级）：`curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- claude-code --scope user`
+- OpenClaw（项目级）：`curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- openclaw --scope project`
+- OpenClaw（用户级）：`curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- openclaw --scope user`
+
+### PowerShell
+
+- Codex：`powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform codex }"`
+- OpenCode（项目级）：`powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform opencode -Scope project }"`
+- OpenCode（用户级）：`powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform opencode -Scope user }"`
+- Claude Code（项目级）：`powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform claude-code -Scope project }"`
+- Claude Code（用户级）：`powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform claude-code -Scope user }"`
+- OpenClaw（项目级）：`powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform openclaw -Scope project }"`
+- OpenClaw（用户级）：`powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform openclaw -Scope user }"`
+
 ## Codex
 
 目标路径：

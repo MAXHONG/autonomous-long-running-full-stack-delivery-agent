@@ -53,6 +53,26 @@ scripts/
 - Chinese platform matrix: [docs/platform-matrix.zh-CN.md](docs/platform-matrix.zh-CN.md)
 - Triggering guide: [docs/triggering.md](docs/triggering.md)
 - Chinese triggering guide: [docs/triggering.zh-CN.md](docs/triggering.zh-CN.md)
+- Impact estimate: [docs/impact.md](docs/impact.md)
+- Chinese impact estimate: [docs/impact.zh-CN.md](docs/impact.zh-CN.md)
+
+## One-line install
+
+These commands download and install the right package directly from GitHub.
+
+### Bash
+
+- Codex: `curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- codex`
+- OpenCode (project): `curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- opencode --scope project`
+- Claude Code (project): `curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- claude-code --scope project`
+- OpenClaw (project): `curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- openclaw --scope project`
+
+### PowerShell
+
+- Codex: `powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform codex }"`
+- OpenCode (project): `powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform opencode -Scope project }"`
+- Claude Code (project): `powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform claude-code -Scope project }"`
+- OpenClaw (project): `powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform openclaw -Scope project }"`
 
 ## Quick install
 
@@ -64,6 +84,10 @@ Copy the package that matches your environment into the tool's expected skill or
 - OpenClaw: `<workspace>/skills/` or `~/.openclaw/skills/`
 
 Detailed examples are in [docs/installation.md](docs/installation.md).
+
+## Estimated impact
+
+See [docs/impact.md](docs/impact.md) for a Mermaid-based before/after comparison. The short version is that this skill primarily improves delivery discipline: state recovery, validated loops, repair behavior, handoff quality, and release readiness.
 
 ## Validation
 

@@ -53,6 +53,26 @@ scripts/
 - 英文平台矩阵：[docs/platform-matrix.md](docs/platform-matrix.md)
 - 触发说明：[docs/triggering.zh-CN.md](docs/triggering.zh-CN.md)
 - 英文触发说明：[docs/triggering.md](docs/triggering.md)
+- 能力提升评估：[docs/impact.zh-CN.md](docs/impact.zh-CN.md)
+- 英文能力提升评估：[docs/impact.md](docs/impact.md)
+
+## 一行安装
+
+下面这些命令可以直接从 GitHub 下载并安装对应平台的版本。
+
+### Bash
+
+- Codex：`curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- codex`
+- OpenCode（项目级）：`curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- opencode --scope project`
+- Claude Code（项目级）：`curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- claude-code --scope project`
+- OpenClaw（项目级）：`curl -fsSL https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.sh | bash -s -- openclaw --scope project`
+
+### PowerShell
+
+- Codex：`powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform codex }"`
+- OpenCode（项目级）：`powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform opencode -Scope project }"`
+- Claude Code（项目级）：`powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform claude-code -Scope project }"`
+- OpenClaw（项目级）：`powershell -NoProfile -ExecutionPolicy Bypass -Command "& { iwr 'https://raw.githubusercontent.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent/main/scripts/install.ps1' -UseBasicParsing | iex; Install-DeliveryAgentSkill -Platform openclaw -Scope project }"`
 
 ## 快速安装
 
@@ -64,6 +84,10 @@ scripts/
 - OpenClaw：`<workspace>/skills/` 或 `~/.openclaw/skills/`
 
 具体命令示例见 [docs/installation.zh-CN.md](docs/installation.zh-CN.md)。
+
+## 能力提升图
+
+可以直接看 [docs/impact.zh-CN.md](docs/impact.zh-CN.md) 里的 Mermaid 对比图。重点不是“模型本体变强了多少”，而是工程交付纪律、状态恢复、验证闭环、交接质量和发布准备度提升了多少。
 
 ## 结构检查
 
