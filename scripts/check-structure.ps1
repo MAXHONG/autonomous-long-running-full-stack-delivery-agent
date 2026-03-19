@@ -10,6 +10,8 @@ $requiredPaths = @(
   "docs/installation.zh-CN.md",
   "docs/platform-matrix.md",
   "docs/platform-matrix.zh-CN.md",
+  "docs/triggering.md",
+  "docs/triggering.zh-CN.md",
   "packages/codex/autonomous-long-running-full-stack-delivery-agent/SKILL.md",
   "packages/codex/autonomous-long-running-full-stack-delivery-agent/agents/openai.yaml",
   "packages/opencode/.opencode/skills/autonomous-long-running-full-stack-delivery-agent/SKILL.md",

@@ -51,6 +51,8 @@ scripts/
 - Chinese installation guide: [docs/installation.zh-CN.md](docs/installation.zh-CN.md)
 - Platform matrix: [docs/platform-matrix.md](docs/platform-matrix.md)
 - Chinese platform matrix: [docs/platform-matrix.zh-CN.md](docs/platform-matrix.zh-CN.md)
+- Triggering guide: [docs/triggering.md](docs/triggering.md)
+- Chinese triggering guide: [docs/triggering.zh-CN.md](docs/triggering.zh-CN.md)
 
 ## Quick install
 

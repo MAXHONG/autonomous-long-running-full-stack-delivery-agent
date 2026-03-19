@@ -51,6 +51,8 @@ scripts/
 - 英文安装说明：[docs/installation.md](docs/installation.md)
 - 平台矩阵：[docs/platform-matrix.zh-CN.md](docs/platform-matrix.zh-CN.md)
 - 英文平台矩阵：[docs/platform-matrix.md](docs/platform-matrix.md)
+- 触发说明：[docs/triggering.zh-CN.md](docs/triggering.zh-CN.md)
+- 英文触发说明：[docs/triggering.md](docs/triggering.md)
 
 ## 快速安装
 

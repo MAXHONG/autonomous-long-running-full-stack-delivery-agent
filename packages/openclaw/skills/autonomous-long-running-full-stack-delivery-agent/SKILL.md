@@ -2,6 +2,7 @@
 name: autonomous-long-running-full-stack-delivery-agent
 description: 面向真实工程交付的长期运行通用开发技能。用于在用户给出明确目标后，少打断用户地持续推进已有仓库或新项目的项目理解、状态恢复、架构设计、task.json 拆解、编码实现、自动测试、修复回归、文档整理、Git 协作、构建打包和发布交付；适用于 Web、API、全栈、自动化与工具型项目，需要跨上下文依赖 progress.md、architecture.md、handoff.md 等持久化状态文件。
 homepage: https://github.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent
+user-invocable: true
 metadata: { "openclaw": { "emoji": "🛠️", "homepage": "https://github.com/MAXHONG/autonomous-long-running-full-stack-delivery-agent", "skillKey": "autonomous-long-running-full-stack-delivery-agent" } }
 ---
 
