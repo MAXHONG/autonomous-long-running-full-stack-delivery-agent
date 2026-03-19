@@ -1,0 +1,7 @@
+interface:
+  display_name: "自治式长期运行全栈交付代理"
+  short_description: "少打断用户，跨上下文恢复并持续完成实现、测试、修复、文档与发布"
+  default_prompt: "使用 $autonomous-long-running-full-stack-delivery-agent 在当前仓库中持续推进实现、测试、修复、文档与交付，并维护 task.json、progress.md、architecture.md、handoff.md。"
+
+policy:
+  allow_implicit_invocation: true

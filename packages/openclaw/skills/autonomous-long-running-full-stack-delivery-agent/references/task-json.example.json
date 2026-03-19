@@ -1,0 +1,110 @@
+{
+  "project": {
+    "name": "Example Project",
+    "goal": "Deliver a production-ready feature set with persistent state, automated validation, and handoff documentation."
+  },
+  "tasks": [
+    {
+      "id": "INIT-001",
+      "category": "infra",
+      "title": "Establish persistent project state files",
+      "description": "Create task.json, progress.md, architecture.md, handoff.md, bootstrap.sh, and run-dev.sh so future sessions can restore context.",
+      "priority": "P0",
+      "dependencies": [],
+      "verification_steps": [
+        "Confirm all required state files exist in the repository root.",
+        "Open each file and verify it contains project-specific content rather than placeholders."
+      ],
+      "status": "done",
+      "passes": true,
+      "notes": [
+        "State files created on 2026-03-19.",
+        "Bootstrap and run scripts verified locally."
+      ]
+    },
+    {
+      "id": "APP-001",
+      "category": "feature",
+      "title": "Implement first user-visible end-to-end slice",
+      "description": "Build the smallest runnable feature slice that proves the core architecture and user flow.",
+      "priority": "P0",
+      "dependencies": [
+        "INIT-001"
+      ],
+      "verification_steps": [
+        "Run the development server or app entrypoint successfully.",
+        "Exercise the primary user path with smoke or e2e verification.",
+        "Confirm logs and visible behavior match the intended outcome."
+      ],
+      "status": "in_progress",
+      "passes": false,
+      "notes": [
+        "Break into smaller tasks if implementation expands beyond one session.",
+        "Do not mark passes=true until real verification completes."
+      ]
+    },
+    {
+      "id": "QUAL-001",
+      "category": "quality",
+      "title": "Establish automated quality gates",
+      "description": "Add or repair lint, typecheck, build, unit, integration, and smoke test entrypoints appropriate for the project.",
+      "priority": "P1",
+      "dependencies": [
+        "INIT-001"
+      ],
+      "verification_steps": [
+        "Execute lint successfully or document blockers with evidence.",
+        "Execute typecheck/build successfully.",
+        "Run at least one automated test path successfully."
+      ],
+      "status": "todo",
+      "passes": false,
+      "notes": [
+        "If the repo lacks these scripts, create them before expanding feature work."
+      ]
+    },
+    {
+      "id": "DOC-001",
+      "category": "docs",
+      "title": "Deliver operator and maintainer documentation",
+      "description": "Write README, architecture, runbook, troubleshooting, and handoff content sufficient for a new engineer to continue work.",
+      "priority": "P1",
+      "dependencies": [
+        "APP-001",
+        "QUAL-001"
+      ],
+      "verification_steps": [
+        "Follow the documented setup commands on a clean environment or verify each command still matches the repo.",
+        "Confirm documentation references real paths, scripts, and outputs."
+      ],
+      "status": "todo",
+      "passes": false,
+      "notes": [
+        "Documentation must describe the current implementation, not the target ideal state."
+      ]
+    },
+    {
+      "id": "REL-001",
+      "category": "release",
+      "title": "Prepare release artifact and release notes",
+      "description": "Produce versioned artifacts, release notes, and the minimal commands needed for push, tag, and publish when permissions allow.",
+      "priority": "P2",
+      "dependencies": [
+        "APP-001",
+        "QUAL-001",
+        "DOC-001"
+      ],
+      "verification_steps": [
+        "Build the release artifact successfully.",
+        "Verify artifact startup or installation path.",
+        "Generate release notes aligned with actual shipped changes."
+      ],
+      "status": "todo",
+      "passes": false,
+      "notes": [
+        "If release permissions are unavailable, provide exact manual takeover steps."
+      ]
+    }
+  ],
+  "last_updated": "2026-03-19T12:00:00+08:00"
+}

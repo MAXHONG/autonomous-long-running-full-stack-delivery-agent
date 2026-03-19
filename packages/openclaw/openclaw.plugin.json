@@ -1,0 +1,14 @@
+{
+  "id": "autonomous-long-running-full-stack-delivery-agent",
+  "name": "Autonomous Long-Running Full-Stack Delivery Agent",
+  "description": "Plugin bundle that ships the long-running full-stack delivery skill for OpenClaw.",
+  "version": "0.1.0",
+  "skills": [
+    "./skills"
+  ],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}
